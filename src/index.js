@@ -17,8 +17,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-
-
 // const client = new ApolloClient({
 //   uri: 'http://localhost:4000/',
 //   cache: new InMemoryCache(),
@@ -32,11 +30,14 @@ const client = new ApolloClient({
 client
   .query({
     query: gql`
-      query GetPosts {
-        posts {
+      query GetPost {
+        post(id:14) {
           id
           title
           content
+          comments {
+            content
+          }
         }
       }
     `
