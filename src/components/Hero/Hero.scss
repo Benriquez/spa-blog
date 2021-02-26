@@ -23,7 +23,7 @@
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity .35s linear;
+  transition: opacity .2s linear;
 
   &.is-active {
     opacity: 1;
@@ -38,12 +38,45 @@
   color: $color-white;
 
   span {
-    padding: 0px 17px 6px;
     background-color: $primary-color;
     box-shadow: 10px 0px 0 7px $primary-color,
                 -10px 0px 0 7px $primary-color;
     box-decoration-break: clone;
     line-height: 1.7;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      background: #000;
+      transform: translateX(-100%);
+
+      .is-active & {
+        animation: textanimate forwards 1s ease;
+        animation-delay: 0.3s;
+      }
+    }
+
+
+  }
+}
+
+@keyframes textanimate {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
 
@@ -62,7 +95,6 @@
   transform: translateY(-50%);
   width: 100%;
   margin: 0 auto;
-  height: 100%;
 }
 
 .hero-slider-nav-button {

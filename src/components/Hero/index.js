@@ -13,10 +13,10 @@ const Hero = () => {
   const {posts} = usePost();
   const [id, setId] = useState(0);
 
-  const handlePrevClick = () => setId(prevId => prevId - 1);
-  const handleNextClick = () => setId(prevId => prevId + 1);
-  const handleClick = (key) => setId(key);
 
+  const handlePrevClick = () => setId(prevId => prevId == 0 ? prevId + 2 : prevId - 1);
+  const handleNextClick = () => setId(prevId => prevId == 2 ? prevId - 2 : prevId + 1);
+  const handleClick = (key) => setId(key);
   const totalSlides = 3;
   const pager = [];
   for(let i = 0; i < totalSlides; i++) {
@@ -25,6 +25,7 @@ const Hero = () => {
   }
 
   return (
+
     <div className="hero">
       <Switch>
         <Route path="/" exact>
@@ -47,8 +48,8 @@ const Hero = () => {
             </ul>
 
             <div className="hero-slider-nav">
-              <span className={`hero-slider-nav-button prev ${id === 0 ? IS_DISABLED : ''}`} onClick={() => handlePrevClick()}></span>
-              <span className={`hero-slider-nav-button next ${id === totalSlides - 1 ? IS_DISABLED : ''}`} onClick={() => handleNextClick()}></span>
+              <span className='hero-slider-nav-button prev' onClick={() => handlePrevClick()}></span>
+              <span className='hero-slider-nav-button next' onClick={() => handleNextClick()}></span>
             </div>
 
             <div className="hero-slider-pager">
