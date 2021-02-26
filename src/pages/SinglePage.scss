@@ -1,0 +1,48 @@
+@import '../assets/styles/settings';
+
+.single-body {
+  font-family: $font-yugo;
+  padding-top: 64px;
+  padding-bottom: 124px;
+
+  h1 {
+    margin-top: 30px;
+    font-size: 40px;
+    letter-spacing: .1em;
+    line-height: 1.66;
+  }
+
+  p {
+    margin-top: 51px;
+    font-size: 18px;
+    line-height: 2.23;
+    letter-spacing: .09em;
+    white-space: pre-line;
+  }
+
+  textarea {
+    font-family: $font-yugo;
+  }
+
+  &.single-body-new {
+     padding-bottom: 30px;
+  }
+}
+
+.single-date {
+  display: block;
+  margin-top: 33px;
+  font-family: $font-montserrat;
+  font-size: 20px;
+  letter-spacing: .2em;
+}
+
+.single-feature-image {
+  margin-top: 38px;
+  padding-top: 48.215%;
+  background-color: $color-dark-gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}

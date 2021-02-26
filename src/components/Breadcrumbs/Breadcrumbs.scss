@@ -1,0 +1,32 @@
+@import '../../assets/styles/settings';
+
+.breadcrumbs {
+  padding: 27px 0;
+  background-color: $color-light;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs-item {
+  list-style: none;
+  color: $primary-color;
+
+  &.breadcrumbs-item-current {
+    &::before {
+      content: '>';
+      display: inline-block;
+      vertical-align: -1px;
+      margin: 0 13px;
+      font-size: 21px;
+    }
+  }
+}
+
+.breadcrumbs-link {
+  color: $primary-color;
+  text-transform: uppercase;
+  text-decoration: none;
+}

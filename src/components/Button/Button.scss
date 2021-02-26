@@ -1,0 +1,29 @@
+@import '../../assets/styles/settings';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  height: 70px;
+  font-family: $font-montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  color: $color-white;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $primary-color;
+
+  &.button-default {
+    display: block;
+    margin-top: 0;
+    height: auto;
+    width: auto;
+    color: $primary-color;
+    text-decoration: underline;
+    background: none;
+    text-transform: none;
+  }
+}

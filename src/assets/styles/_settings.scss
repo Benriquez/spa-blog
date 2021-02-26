@@ -1,0 +1,23 @@
+$font-montserrat: 'Montserrat', sans-serif;
+$font-yugo: "游ゴシック", "Yu Gothic", $font-montserrat, "游ゴシック体", YuGothic, sans-serif;
+
+$primary-color: #101010;
+$color-white: #fff;
+$color-gray: #292929;
+$color-light: #F5F5F5;
+$color-red: #f00;
+$color-green: #008000;
+$color-light-gray: #707070;
+$color-light-red: #fdf1f1;
+$color-light-green: #e9ffe9;
+$color-dark-gray: #D6D6D6;
+
+$container: calc(1120px + 60px);
+
+$z-min: 1;
+$z-min2: 2;
+$z-max9: 9;
+$z-max: 10;
+
+$duration: .25s;
+$easing: cubic-bezier(.17,.67,.82,.95);

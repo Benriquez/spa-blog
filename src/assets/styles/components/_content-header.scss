@@ -1,0 +1,19 @@
+.content-header {
+  display: flex;
+  align-items: center;
+}
+
+.content-header-item {
+  letter-spacing: 0.1em;
+}
+
+.content-header-item-right {
+  display: flex;
+  margin-left: auto;
+}
+
+.content-header-link {
+  &:not(:first-child) {
+    margin-left: 48px;
+  }
+}

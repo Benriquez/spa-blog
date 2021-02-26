@@ -1,0 +1,27 @@
+.news-header {
+  display: flex;
+  align-items: center;
+}
+
+.news-heading {
+  margin-right: auto;
+}
+
+.news-list {
+ list-style: none;
+ display: flex;
+ flex-wrap: wrap;
+ margin: 5px -25px 0;
+}
+
+.news-item {
+  margin: 60px 25px 0;
+  width: calc((100% / 3) - 50px);
+}
+
+.news-button {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto 0;
+  width: 340px;
+}

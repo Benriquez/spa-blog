@@ -1,0 +1,42 @@
+@import '../../assets/styles/settings';
+
+.article-card {
+  display: block;
+  height: 100%;
+}
+
+.article-card-link {
+  display: block;
+  height: 100%;
+  padding: 39px 28px;
+  color: $primary-color;
+  text-decoration: none;
+  border: 1px solid $primary-color;
+}
+
+.article-card-image {
+  padding: 35.5% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.article-card-time {
+  display: block;
+  margin: 26px 0 9px;
+  font-family: $font-montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.article-card-desc {
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &.article-card-desc-top {
+    margin-top: 26px;
+  }
+}

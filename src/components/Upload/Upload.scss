@@ -1,0 +1,45 @@
+@import '../../assets/styles/settings';
+
+.upload {
+  margin-top: 38px;
+  padding-top: 48.215%;
+  background-color: $color-dark-gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &.is-active {
+    background-color: rgba($color-dark-gray, .5);
+
+    .upload-text {
+      opacity: 1;
+    }
+  }
+}
+
+.upload-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity $duration $easing;
+}
+
+.upload-button {
+  width: 258px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.upload-file {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}

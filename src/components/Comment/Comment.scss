@@ -1,0 +1,59 @@
+@import '../../assets/styles/settings';
+
+.comment {
+  padding-top: 58px;
+  border-top: 1px solid $color-light-gray;
+}
+
+.comment-list {
+  list-style: none;
+  margin-top: 40px;
+  margin-bottom: -9px;
+}
+
+.comment-item {
+  margin-bottom: 48px;
+  padding: 52px 41px;
+  background-color: $color-light;
+
+  &.comment-item-textarea {
+    padding: 0;
+    background: none;
+  }
+
+  textarea {
+    display: block;
+    padding: 30px;
+    width: 100%;
+    min-height: 200px;
+    font-family: $font-montserrat;
+    font-size: 19px;
+    font-style: italic;
+
+    &::placeholder {
+      color: rgba($primary-color, .5);
+    }
+  }
+}
+
+.comment-item-text {
+  font-family: $font-yugo;
+  font-size: 18px;
+  letter-spacing: .1em;
+  line-height: 2.2;
+  white-space: pre-line;
+}
+
+.comment-item-date {
+  display: block;
+  margin-top: 24px;
+  font-family: $font-montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: .1em;
+}
+
+.comment-button {
+  margin-left: auto;
+  width: 210px;
+}

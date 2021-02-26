@@ -1,0 +1,66 @@
+@import '../../assets/styles/settings';
+
+.footer {
+  background-color: $color-gray;
+}
+
+.footer-container {
+  position: relative;
+  padding: 76px 30px 64px;
+}
+
+.footer-text {
+  margin-top: 36px;
+  color: $color-white;
+  line-height: 2;
+}
+
+.footer-back-top {
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+
+  &.is-active {
+    position: fixed;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    width: 70px;
+    height: 70px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $primary-color;
+    letter-spacing: .1em;
+    background-color: $color-white;
+    text-decoration: none;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 10px;
+      height: 10px;
+      border-top: 3px solid $primary-color;
+      border-right: 3px solid $primary-color;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.footer-copyright {
+  padding: 35px;
+  font-weight: 300;
+  color: $color-white;
+  text-align: center;
+  letter-spacing: .1em;
+  background-color: $primary-color;
+
+  small {
+      ont-size: 16px;
+  }
+}

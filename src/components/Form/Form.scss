@@ -1,0 +1,76 @@
+@import '../../assets/styles/settings';
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%);
+  visibility: hidden;
+  z-index: $z-min2;
+  transition: transform .45s $easing,
+              visibility .45s $easing;
+
+  &.is-active {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+.form-inner {
+  max-width: 460px;
+  width: 100%;
+}
+
+.form-heading {
+  margin-bottom: 45px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.form-group {
+  margin: 18px 0;
+}
+
+.form-label {
+  font-size: 18px;
+  letter-spacing: .06em;
+}
+
+.form-field {
+  display: block;
+  margin-top: 3px;
+  padding: 0 12px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid $primary-color;
+  transition: border-color $duration $easing;
+}
+
+.form-text {
+  margin-top: 35px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: .06em;
+}
+
+.form-text-link {
+  margin-left: 6px;
+  font-family: $font-montserrat;
+  font-size: 18px;
+  color: $primary-color;
+  letter-spacing: .1em;
+  background: none;
+  text-decoration: none;
+
+  span {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
