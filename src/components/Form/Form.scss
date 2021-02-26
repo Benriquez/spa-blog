@@ -9,15 +9,16 @@
   background-color: $color-white;
   position: fixed;
   top: 0;
-  transform: translateY(-100%);
+  opacity: 0;
+
   visibility: hidden;
   z-index: $z-min2;
-  transition: transform .45s $easing,
+  transition: opacity .3s $easing,
               visibility .45s $easing;
 
   &.is-active {
-    transform: translateY(0);
     visibility: visible;
+    opacity: 1;
   }
 }
 

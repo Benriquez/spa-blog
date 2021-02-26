@@ -5,6 +5,7 @@ import './App.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
+import ScrollToTop from './components/ScrollToTop';
 import Pages from './pages/Pages';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
     <BrowserRouter>
       <div className="app">
         <Header />
+        <ScrollToTop />
         <Switch>
           <Route path='/' exact>
             <Hero />
