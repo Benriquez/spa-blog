@@ -44,7 +44,7 @@ const SinglePage = () => {
 
         <h1>{postItem ? postItem.title : post.title}</h1>
         <div className="single-feature-image"
-          style={{ backgroundImage: `url(${postItem ? noImage : post.image})` }}></div>
+          style={{ backgroundImage: `url(${postItem && postItem.image ? postItem.image : noImage})` }}></div>
         {postItem && (postItem.content && <p>{postItem.content}</p>)}
         {!postItem && (post.content && <p>{post.content}</p>)}
 

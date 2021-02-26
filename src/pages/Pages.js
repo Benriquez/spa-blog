@@ -3,7 +3,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 
 import useAuth from '../hooks/useAuth';
 
-import Posts from '../components/Posts';
+import News from '../components/News';
 import SinglePage from './SinglePage';
 import SingleEditPage from './SingleEditPage';
 import SingleNewPage from './SingleNewPage';
@@ -28,7 +28,7 @@ const Pages = () => {
           <SinglePage />
         </Route>
         <Route path='/' exact>
-          <Posts />
+          <News />
         </Route>
       </Switch>
     </main>

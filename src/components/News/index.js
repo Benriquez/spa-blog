@@ -6,9 +6,9 @@ import usePost from '../../hooks/usePost'
 
 import Article from '../Article';
 import Button from '../Button';
-import './Posts.scss';
+import './News.scss';
 
-const Posts = () => {
+const News = () => {
   const {posts} = usePost();
   const {isLoggedIn} = useAuth();
   const [articleItems, setArticleItems] = useState(6);
@@ -56,4 +56,4 @@ const Posts = () => {
   );
 }
 
-export default Posts;
+export default News;

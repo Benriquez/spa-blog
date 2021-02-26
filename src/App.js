@@ -12,6 +12,11 @@ const App = () => {
     <BrowserRouter>
       <div className="app">
         <Header />
+        <Switch>
+          <Route path='/' exact>
+            <Hero />
+          </Route>
+        </Switch>
         <Pages />
         <Footer />
       </div>

@@ -63,9 +63,14 @@ const Header = () => {
         <div className="l-container header-container">
           {element}
           <div className="header-right">
+            {isLoggedIn &&
             <button className="header-right-button" onClick={() => handleLogout()}>
-              Login
-            </button>
+              Logout
+            </button>}
+            {!isLoggedIn &&
+            <button className="header-right-button" onClick={() => handleClick()}>
+              {buttonText}
+            </button>}
           </div>
         </div>
       </header>
