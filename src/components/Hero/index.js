@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import moment from 'moment';
 
@@ -12,10 +12,19 @@ import noImage from '../../assets/images/noimage.jpg';
 const Hero = () => {
   const {posts} = usePost();
   const [id, setId] = useState(0);
-
-
-  const handlePrevClick = () => setId(prevId => prevId == 0 ? prevId + 2 : prevId - 1);
-  const handleNextClick = () => setId(prevId => prevId == 2 ? prevId - 2 : prevId + 1);
+  const [count, setCount] = useState(0);
+  useInterval(() => {
+    setCount(count + 1);
+    if(count >= 5) { handleNextClick(); }
+  }, 1000);
+  const handlePrevClick = () => {
+    setId(prevId => prevId == 0 ? prevId + 2 : prevId - 1);
+    setCount(0);
+  }
+  const handleNextClick = () => {
+    setId(prevId => prevId == 2 ? prevId - 2 : prevId + 1);
+    setCount(0);
+  }
   const handleClick = (key) => setId(key);
   const totalSlides = 3;
   const pager = [];
@@ -27,6 +36,7 @@ const Hero = () => {
   return (
 
     <div className="hero">
+
       <Switch>
         <Route path="/" exact>
           <div className="hero-slider">
@@ -60,6 +70,26 @@ const Hero = () => {
       </Switch>
     </div>
   );
+}
+
+function useInterval(callback, delay) {
+  const savedCallback = useRef();
+
+  // Remember the latest function.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
 }
 
 export default Hero;
