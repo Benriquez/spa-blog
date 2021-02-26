@@ -25,7 +25,10 @@ const Hero = () => {
     setId(prevId => prevId == 2 ? prevId - 2 : prevId + 1);
     setCount(0);
   }
-  const handleClick = (key) => setId(key);
+  const handleClick = (key) => {
+    setId(key)
+    setCount(0)
+  }
   const totalSlides = 3;
   const pager = [];
   for(let i = 0; i < totalSlides; i++) {
